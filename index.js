@@ -1,22 +1,17 @@
 const Discord = require("Discord.js");
 const bot = new Discord.Client();
 
-//const token = Insira o token do seu bot.;
-const PREFIX = '!';
+const token = "Insira o token do seu bot.!;
 
 bot.on('ready', ()=>{
     console.log("bot funcionou");
 })
 
 bot.on('message', message => {
-    let args = message.content.substring(PREFIX.length).split(" ");
+    var UserId = "ID do usuario que será verificado.";
 
-    switch(args[0]){
-        case 'ping':
-            message.reply('!pong');
-        break;
+    if (message.author.id === UserId) {
+        message.delete(100)
     }
-
 });
-
 bot.login(token);
