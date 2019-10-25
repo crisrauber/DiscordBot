@@ -11,7 +11,9 @@ bot.on('message', message => {
     var UserId = "ID do usuario que será verificado.";
 
     if (message.author.id === UserId) {
-        message.delete(100)
+        if (message.content === "") {
+            message.delete(0)
+        }
     }
 });
 bot.login(token);
