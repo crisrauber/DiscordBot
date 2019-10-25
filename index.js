@@ -1,7 +1,7 @@
 const Discord = require("Discord.js");
 const bot = new Discord.Client();
 
-const token = /Insira o token do seu bot.;
+//const token = Insira o token do seu bot.;
 const PREFIX = '!';
 
 bot.on('ready', ()=>{
